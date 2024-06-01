@@ -1,0 +1,40 @@
+package testComponents;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class BaseTest {
+	
+	public void setup() throws IOException {
+		
+		
+		Properties p=new Properties();
+		FileInputStream f=new FileInputStream(System.getProperty("user.dir")+"/Ecommerce/src/test/java/Resources/globaldata.properties");
+		p.load(f);//expecting input stream
+		String bname=p.getProperty("browser");
+		
+		
+		if(bname.equals("chrome")) {
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
+		driver.manage().window().maximize();
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMillis(2000));
+		}else if(bname.equals("edge")) {
+			
+			//edge
+			
+			
+		}else if(bname.equals("firefox")) {
+			
+			//firefox code
+		}
+	}
+
+}

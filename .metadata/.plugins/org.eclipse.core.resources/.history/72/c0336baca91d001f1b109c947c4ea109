@@ -1,0 +1,64 @@
+package seleniumProject.pageObjects;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import testComponents.BaseTest;
+
+import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.*;
+
+public class standalone extends BaseTest{
+	
+	static String prod="ZARA COAT 3";
+
+	@Test
+	public void endToEnd() throws IOException, InterruptedException {
+		LoginPage l=launchApp();
+		l.login("1995@gmail.com", "Admin123");
+	
+		//prod page
+		
+	ProductPage p=new ProductPage(driver);		
+	p.selectProduct(prod);
+	p.clickOnCartBtn();
+	
+	//cart page
+     CartPage c=new CartPage(driver);
+	
+	Boolean res=c.l.stream().anyMatch(s->s.getText().contains(prod));
+	Assert.assertTrue(res);	
+	c.scrollup();
+	c.clickOnCheckoutBtn();
+	//checkhout page
+	
+	CheckOutPage ch=new CheckOutPage(driver);
+	ch.countryInput("Ind");
+	ch.clickOnCountry();
+	ch.scrollup();
+	
+	//wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[contains(@class,'actions')]/a"))));
+	ch.placeOrder();
+	
+	
+	//confirmation page
+	ConfirmationPage co=new ConfirmationPage(driver);
+	
+	String confirm=co.mssg();
+	Assert.assertEquals(confirm, "THANKYOU FOR THE ORDER.");
+	
+	
+	
+	
+	
+	//driver.close();	
+		
+	
+	}
+	
+}

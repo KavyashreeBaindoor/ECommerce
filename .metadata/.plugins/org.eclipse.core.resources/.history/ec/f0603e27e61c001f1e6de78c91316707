@@ -1,0 +1,64 @@
+package seleniumProject.pageObjects;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Utility.Baseclass;
+
+public class ProductPage extends Baseclass {
+	
+	WebDriver driver;
+
+	public ProductPage(WebDriver d) {
+		super(d);
+		this.driver = d;
+		PageFactory.initElements(d, this);
+	}
+	
+	
+	
+	
+
+	@FindBy(xpath="//div[@class='card-body']")
+	List<WebElement> card;
+	
+	
+	
+	By productAddedPopup=By.xpath("//div[@aria-label='Product Added To Cart']");
+	
+			
+	@FindBy(xpath="//button[@class='btn btn-custom'])[3]")
+	WebElement cartBtn;
+	
+	
+	//actions methods
+	
+	public void selectProduct(String prod) throws InterruptedException {
+		for(WebElement b:card) {
+			
+			if(	b.findElement(By.tagName("h5")).getText().contains(prod)){
+		System.out.println(true);
+		Thread.sleep(2000);
+
+		//wait.until(ExpectedConditions.visibilityOf(b.findElement(By.xpath("//button[2]")) ));
+		b.findElement(By.xpath("//button[2]")).click();
+		break;
+				}
+			}
+	}
+	
+	
+	
+	public void clickOnCartBtn(WebDriverWait wait) {
+		waitforElementtobeVisible(productAddedPopup);
+		cartBtn.click();
+	}
+
+}

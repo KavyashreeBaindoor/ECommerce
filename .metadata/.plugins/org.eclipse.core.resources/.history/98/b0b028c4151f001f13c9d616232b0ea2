@@ -1,0 +1,16 @@
+package testComponents;
+
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+
+public class ReRunFaliedTests implements IRetryAnalyzer {
+
+	@Override
+	public boolean retry(ITestResult result) {
+		
+		//failed test also comes to this block
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

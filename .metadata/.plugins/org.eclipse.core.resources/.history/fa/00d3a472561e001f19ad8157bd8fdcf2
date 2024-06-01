@@ -1,0 +1,22 @@
+package Resources;
+
+import org.testng.annotations.DataProvider;
+
+public class DataSupplyClass {
+	
+	@DataProvider()
+	public Object[][] datasupply() {
+		 
+		 Object[][] obj= new String[2][3];
+		 obj[0][0]="1995@gmail.com";
+		 obj[0][1]="Admin123";
+		 obj[0][2]="ZARA COAT 3";
+		 obj[1][0]="1999@gmail.com";
+		 obj[1][1]="Admin321";
+		 obj[1][2]="IPHONE 13 PRO";
+		 return obj;
+		
+	}
+	
+
+}

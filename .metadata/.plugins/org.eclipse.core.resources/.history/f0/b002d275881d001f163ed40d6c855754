@@ -1,0 +1,48 @@
+package seleniumProject.pageObjects;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import Utility.Baseclass;
+
+public class CartPage extends Baseclass{
+	WebDriver driver;
+
+	public CartPage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(xpath="//div[@class='cart']")
+	WebElement contianer_cart_prods;
+	
+	
+	List<WebElement> l=contianer_cart_prods.findElements(By.tagName("h3"));
+	
+	@FindBy(xpath="//button[text()='Checkout']")
+	WebElement checkoutBtn;
+	
+	
+	public void clickOnCheckoutBtn() {
+		checkoutBtn.click();
+	}
+	
+	
+	public void scrollup() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);",checkoutBtn);
+	}
+	
+	
+	
+	
+
+}

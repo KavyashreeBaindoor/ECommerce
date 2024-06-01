@@ -1,0 +1,34 @@
+package testComponents;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import seleniumProject.pageObjects.CartPage;
+import seleniumProject.pageObjects.CheckOutPage;
+import seleniumProject.pageObjects.ConfirmationPage;
+import seleniumProject.pageObjects.ProductPage;
+
+public class ErrorHandling extends BaseTest{
+	static String prod="ZARA COAT 3";
+
+	@Test
+	public void endToEnd() throws IOException, InterruptedException {
+		
+		ProductPage p=lo.login("1995@gmail.com", "A123");
+		
+String mssg=lo.getErrorMssg();
+Assert.assertEquals(mssg, "Incorrect email or password");
+		
+	
+	
+	
+		
+		
+	
+	}
+	
+
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-31T05:59:26 GMT-07:00" name="Suite" finished-at="2024-05-31T06:05:30 GMT-07:00" duration-ms="363704">
+    <groups>
+    </groups>
+    <test started-at="2024-05-31T05:59:26 GMT-07:00" name="test1" finished-at="2024-05-31T06:03:53 GMT-07:00" duration-ms="267501">
+      <class name="testComponents.standalone5">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.standalone5@1dde4cb2]" started-at="2024-05-31T05:59:26 GMT-07:00" name="launchApp" finished-at="2024-05-31T06:02:55 GMT-07:00" duration-ms="209058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="endToEnd()[pri:0, instance:testComponents.standalone5@1dde4cb2]" started-at="2024-05-31T06:02:55 GMT-07:00" name="endToEnd" finished-at="2024-05-31T06:03:19 GMT-07:00" duration-ms="23480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endToEnd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.standalone5@1dde4cb2]" started-at="2024-05-31T06:03:19 GMT-07:00" name="tearDown" finished-at="2024-05-31T06:03:21 GMT-07:00" duration-ms="2101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.standalone5@1dde4cb2]" started-at="2024-05-31T06:03:21 GMT-07:00" name="launchApp" finished-at="2024-05-31T06:03:50 GMT-07:00" duration-ms="29089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="checkOrderHistory()[pri:0, instance:testComponents.standalone5@1dde4cb2]" started-at="2024-05-31T06:03:50 GMT-07:00" name="checkOrderHistory" finished-at="2024-05-31T06:03:53 GMT-07:00" depends-on-methods="testComponents.standalone5.endToEnd" duration-ms="2803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderHistory -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.standalone5@1dde4cb2]" started-at="2024-05-31T06:03:53 GMT-07:00" name="tearDown" finished-at="2024-05-31T06:03:53 GMT-07:00" duration-ms="423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testComponents.standalone5 -->
+    </test> <!-- test1 -->
+    <test started-at="2024-05-31T06:03:54 GMT-07:00" name="test2" finished-at="2024-05-31T06:05:30 GMT-07:00" duration-ms="95033">
+      <class name="testComponents.ErrorHandling">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.ErrorHandling@57a3af25]" started-at="2024-05-31T06:03:54 GMT-07:00" name="launchApp" finished-at="2024-05-31T06:04:15 GMT-07:00" duration-ms="20536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="loginErrorHandling()[pri:0, instance:testComponents.ErrorHandling@57a3af25]" started-at="2024-05-31T06:04:15 GMT-07:00" name="loginErrorHandling" finished-at="2024-05-31T06:04:16 GMT-07:00" duration-ms="1378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorHandling -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.ErrorHandling@57a3af25]" started-at="2024-05-31T06:04:16 GMT-07:00" name="tearDown" finished-at="2024-05-31T06:04:17 GMT-07:00" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.ErrorHandling@57a3af25]" started-at="2024-05-31T06:04:17 GMT-07:00" name="launchApp" finished-at="2024-05-31T06:05:03 GMT-07:00" duration-ms="46680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="productCartErrorHandling()[pri:0, instance:testComponents.ErrorHandling@57a3af25]" started-at="2024-05-31T06:05:03 GMT-07:00" name="productCartErrorHandling" finished-at="2024-05-31T06:05:27 GMT-07:00" duration-ms="23521" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productCartErrorHandling -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.ErrorHandling@57a3af25]" started-at="2024-05-31T06:05:27 GMT-07:00" name="tearDown" finished-at="2024-05-31T06:05:30 GMT-07:00" duration-ms="2515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testComponents.ErrorHandling -->
+    </test> <!-- test2 -->
+  </suite> <!-- Suite -->
+</testng-results>

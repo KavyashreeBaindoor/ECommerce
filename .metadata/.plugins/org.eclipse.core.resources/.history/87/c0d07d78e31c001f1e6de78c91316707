@@ -1,0 +1,20 @@
+package seleniumProject.pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class ProductPage {
+	
+	WebDriver driver;
+
+	public ProductPage(WebDriver d) {
+		super();
+		this.driver = d;
+		PageFactory.initElements(d, this);
+	}
+	
+	
+	
+	
+
+}
