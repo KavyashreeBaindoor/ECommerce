@@ -1,65 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-31T05:08:18 GMT-07:00" name="Suite" finished-at="2024-05-31T05:10:17 GMT-07:00" duration-ms="118718">
+  <suite started-at="2024-06-13T22:36:35 GMT-07:00" name="Default suite" finished-at="2024-06-13T22:37:22 GMT-07:00" duration-ms="46996">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:CucumberProjectRunner.failedScenario@37ceb1df]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-05-31T05:08:18 GMT-07:00" name="test1" finished-at="2024-05-31T05:09:29 GMT-07:00" duration-ms="71332">
-      <class name="testComponents.standalone5">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.standalone5@7b2bbc3]" started-at="2024-05-31T05:08:18 GMT-07:00" name="launchApp" finished-at="2024-05-31T05:08:49 GMT-07:00" duration-ms="31330" status="PASS">
+    <test started-at="2024-06-13T22:36:35 GMT-07:00" name="Default test" finished-at="2024-06-13T22:37:22 GMT-07:00" duration-ms="46996">
+      <class name="CucumberProjectRunner.failedScenario">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:CucumberProjectRunner.failedScenario@37ceb1df]" started-at="2024-06-13T22:36:35 GMT-07:00" name="setUpClass" finished-at="2024-06-13T22:36:39 GMT-07:00" duration-ms="3420" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7d3fb0ef]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="endToEnd()[pri:0, instance:testComponents.standalone5@7b2bbc3]" started-at="2024-05-31T05:08:49 GMT-07:00" name="endToEnd" finished-at="2024-05-31T05:09:09 GMT-07:00" duration-ms="20052" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:CucumberProjectRunner.failedScenario@37ceb1df]" started-at="2024-06-13T22:36:39 GMT-07:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-13T22:37:15 GMT-07:00" duration-ms="36325" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search experience of user in both home and deals page should be same"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search and place order for Products"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Beetroot] but found [No data]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Beetroot] but found [No data]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at CucumberProjectStepDef.OfferPageStepDef.validate_offersPage_prod_name_validates_with_ProductPageprodname(OfferPageStepDef.java:51)
+at ✽.validate offersPage prod name validates with ProductPage prod name(file:///F:/2024/EcommerceProject/Ecommerce/src/test/java/CucumberProjectFeatures/SearchProduct.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endToEnd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.standalone5@7b2bbc3]" started-at="2024-05-31T05:09:09 GMT-07:00" name="tearDown" finished-at="2024-05-31T05:09:12 GMT-07:00" duration-ms="2476" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:CucumberProjectRunner.failedScenario@37ceb1df]" started-at="2024-06-13T22:37:15 GMT-07:00" name="tearDownClass" finished-at="2024-06-13T22:37:22 GMT-07:00" duration-ms="7096" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.standalone5@7b2bbc3]" started-at="2024-05-31T05:09:12 GMT-07:00" name="launchApp" finished-at="2024-05-31T05:09:22 GMT-07:00" duration-ms="10461" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="checkOrderHistory()[pri:0, instance:testComponents.standalone5@7b2bbc3]" started-at="2024-05-31T05:09:22 GMT-07:00" name="checkOrderHistory" finished-at="2024-05-31T05:09:29 GMT-07:00" depends-on-methods="testComponents.standalone5.endToEnd" duration-ms="6309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkOrderHistory -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.standalone5@7b2bbc3]" started-at="2024-05-31T05:09:29 GMT-07:00" name="tearDown" finished-at="2024-05-31T05:09:29 GMT-07:00" duration-ms="514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testComponents.standalone5 -->
-    </test> <!-- test1 -->
-    <test started-at="2024-05-31T05:09:31 GMT-07:00" name="test2" finished-at="2024-05-31T05:10:17 GMT-07:00" duration-ms="45772">
-      <class name="testComponents.ErrorHandling">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.ErrorHandling@3d285d7e]" started-at="2024-05-31T05:09:31 GMT-07:00" name="launchApp" finished-at="2024-05-31T05:09:49 GMT-07:00" duration-ms="18065" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="loginErrorHandling()[pri:0, instance:testComponents.ErrorHandling@3d285d7e]" started-at="2024-05-31T05:09:49 GMT-07:00" name="loginErrorHandling" finished-at="2024-05-31T05:09:50 GMT-07:00" duration-ms="988" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginErrorHandling -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.ErrorHandling@3d285d7e]" started-at="2024-05-31T05:09:50 GMT-07:00" name="tearDown" finished-at="2024-05-31T05:09:50 GMT-07:00" duration-ms="527" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:testComponents.ErrorHandling@3d285d7e]" started-at="2024-05-31T05:09:50 GMT-07:00" name="launchApp" finished-at="2024-05-31T05:10:02 GMT-07:00" duration-ms="11685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="productCartErrorHandling()[pri:0, instance:testComponents.ErrorHandling@3d285d7e]" started-at="2024-05-31T05:10:02 GMT-07:00" name="productCartErrorHandling" finished-at="2024-05-31T05:10:16 GMT-07:00" duration-ms="13949" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productCartErrorHandling -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testComponents.ErrorHandling@3d285d7e]" started-at="2024-05-31T05:10:16 GMT-07:00" name="tearDown" finished-at="2024-05-31T05:10:17 GMT-07:00" duration-ms="542" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testComponents.ErrorHandling -->
-    </test> <!-- test2 -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- CucumberProjectRunner.failedScenario -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
